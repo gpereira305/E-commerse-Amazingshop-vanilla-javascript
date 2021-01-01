@@ -1,16 +1,20 @@
 {
-  "name": "frontend",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "start": "live-server src --verbose",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "live-server": "^1.2.1"
-  },
-  "dependencies": {},
-  "description": ""
+    "name": "frontend",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "start": "webpack serve --watch-content-base --open",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "webpack": "^5.11.1",
+        "webpack-cli": "^4.3.1",
+        "webpack-dev-server": "^3.11.1"
+    },
+    "dependencies": {
+        "axios": "^0.21.1"
+    },
+    "description": ""
 }
