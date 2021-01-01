@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    max-width: 1300px;
+    margin: auto;
+}
+
+body {
+    height: 100vh;
+    font: 1.6rem Helvetica, Arial;
+    font-weight: bold;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 'header' 'main' 'footer';
+    grid-template-columns: 1fr;
+    grid-template-rows: 5rem 1fr 5rem;
+    height: 100%;
+}
+
+
+/*  HEADER SECTION */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    grid-area: header;
+    background: #203040;
+    color: #ffffff;
+    align-items: center;
+    padding: 1rem 33rem;
+    height: 5rem;
+}
+
+header a {
+    color: #ffffff;
+    transition: all ease .3s;
+}
+
+header a:hover {
+    color: #b64606;
+}
+
+
+/* MAIN SECTION */
+
+.brand a {
+    font-size: 3rem;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    justify-content: center;
+}
+
+.products li {
+    flex: 0 1 30rem;
+    margin: 5px;
+    height: 42rem;
+    border: .2rem solid #e0e0e0;
+    border-radius: 5px;
+}
+
+.product-grid {
+    transition: all ease .4s;
+}
+
+.product-grid:hover {
+    transform: scale(1.03);
+    -webkit-box-shadow: 0px 0px 60px -14px rgba(112, 108, 112, 1);
+    -moz-box-shadow: 0px 0px 60px -14px rgba(112, 108, 112, 1);
+    box-shadow: 0px 0px 60px -14px rgba(112, 108, 112, 1);
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    background: #ffffff;
+}
+
+.product img {
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.product-main-details {
+    padding: 10px;
+}
+
+.product-name {
+    line-height: 2rem;
+}
+
+.product-name a:hover {
+    color: #b64606;
+}
+
+.product-name a {
+    transition: all ease .3s;
+}
+
+.product-brand {
+    font-size: 1.5rem;
+    color: #808080
+}
+
+.product-price {
+    font-size: 2.3rem;
+}
+
+
+/* FOOTER SECTION */
+
+footer {
+    background: #203040;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
