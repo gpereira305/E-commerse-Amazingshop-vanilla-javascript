@@ -23,7 +23,7 @@ const ProductScreen = {
                   <a href="/#/">
                     <h3 style="margin-bottom: 1rem;">
                         <i class="fas fa-arrow-left"></i> 
-                         Voltar à Home
+                         Voltar
                     </h3>
                   </a>
                </div>
