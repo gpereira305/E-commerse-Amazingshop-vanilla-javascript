@@ -1,5 +1,5 @@
 import axios from 'axios'; 
-
+import Ratings from '../components/Ratings';
 
 
 const HomeScreen = {
@@ -28,6 +28,12 @@ const HomeScreen = {
                                 <a href="/#/product/1">
                                     ${product.name}
                                 </a>
+                            </div>
+                            <div class="product-rating">
+                               ${Ratings.render({
+                                   value: product.rating,
+                                   text: `${product.numReviews} reviews`,
+                               })}
                             </div>
                             <div class="product-brand">
                                  ${product.brand}

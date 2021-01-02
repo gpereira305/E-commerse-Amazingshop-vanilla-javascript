@@ -1,3 +1,5 @@
+/* GLOBAL SETTING */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -21,6 +23,39 @@ li {
     max-width: 1300px;
     margin: auto;
 }
+
+button {
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 1rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+button.primary {
+    background: #ec8816;
+    transition: all .3s ease;
+}
+
+button.primary:hover {
+    background: #f5a851;
+}
+
+.fw {
+    width: 100%;
+}
+
+.success {
+    color: #0a9c0a;
+}
+
+.error {
+    color: #ff0000;
+}
+
+
+/* BODY SECTION */
 
 body {
     height: 100vh;
@@ -53,6 +88,7 @@ header {
 header a {
     color: #ffffff;
     transition: all ease .3s;
+    margin: 0 1rem;
 }
 
 header a:hover {
@@ -70,15 +106,17 @@ header a:hover {
     display: flex;
     flex-wrap: wrap;
     padding: 0;
+    margin-top: 3rem;
     justify-content: center;
 }
 
 .products li {
     flex: 0 1 30rem;
-    margin: 5px;
+    margin: 5px 5px 30px 5px;
     height: 42rem;
-    border: .2rem solid #e0e0e0;
+    border: .2rem solid #f1f1f1;
     border-radius: 5px;
+    overflow: hidden;
 }
 
 .product-grid {
@@ -86,7 +124,7 @@ header a:hover {
 }
 
 .product-grid:hover {
-    transform: scale(1.03);
+    transform: scale(1.0);
     -webkit-box-shadow: 0px 0px 60px -14px rgba(112, 108, 112, 1);
     -moz-box-shadow: 0px 0px 60px -14px rgba(112, 108, 112, 1);
     box-shadow: 0px 0px 60px -14px rgba(112, 108, 112, 1);
@@ -110,15 +148,16 @@ header a:hover {
 }
 
 .product-name {
-    line-height: 2rem;
+    line-height: 2.3rem;
 }
 
 .product-name a:hover {
-    color: #b64606;
+    color: #ec5b07;
 }
 
 .product-name a {
     transition: all ease .3s;
+    text-transform: uppercase;
 }
 
 .product-brand {
@@ -128,6 +167,65 @@ header a:hover {
 
 .product-price {
     font-size: 2.3rem;
+    padding-bottom: 2.5rem;
+    margin-top: 1rem;
+}
+
+.rating {
+    color: #ffc000;
+    font-size: 1.4rem;
+}
+
+.rating span:last-child {
+    color: #000000;
+}
+
+
+/* PRODUCT SCREEN */
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.details-image {
+    flex: 2 1 60rem;
+    margin: 2rem;
+    margin-top: 0;
+}
+
+.details-image img {
+    max-width: 60rem;
+    width: 100%;
+}
+
+.details-info,
+.details-action {
+    flex: 11 20rem;
+}
+
+.details-info ul,
+.details-action ul {
+    padding: 0;
+}
+
+.details-info h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.details-info li,
+.details-action li {
+    margin-bottom: 1rem;
+}
+
+.details-action {
+    border: .1rem solid #808080;
+    border-radius: 5px;
+    background: #f8f8f8;
+    padding: 1rem;
 }
 
 
