@@ -1,5 +1,5 @@
 import { getProduct } from '../api';
-import {parseRequestUrl} from '../utils';
+import {hideLoading, parseRequestUrl, showLoading} from '../utils';
 import Ratings from '../components/Ratings';
 
 
@@ -13,17 +13,21 @@ const ProductScreen = {
 
     render: async () => {
          const request = parseRequestUrl();
+         showLoading();
+
          const product = await getProduct(request.id);
          if(product.error){
             return `<h2>${product.error}</h2>`;  
          }
+         hideLoading();
+
          return `
             <div class="content">
                <div class="back-to-result">
                   <a href="/#/">
                     <h3 style="margin-bottom: 1rem;">
                         <i class="fas fa-arrow-left"></i> 
-                         Voltar
+                         Home
                     </h3>
                   </a>
                </div>
@@ -64,11 +68,11 @@ const ProductScreen = {
                        <li> 
                           ${
                              product.countInStock > 0 ?
-                            `<span class="success"><i class="fas fa-check"></i> Disponível</span>` :
-                            `<span class="error"><i class="fas fa-times"></i> Indisponível</span>`
+                            `<span class="success"><i class="fas fa-check"></i> Em estoque</span>` :
+                            `<span class="error"><i class="fas fa-times"></i> Esgotado</span>`
                            }
                        </li>
-                       <li>
+                       <li style="margin-top: 2.5rem;">
                           <button class="fw primary" id="add-button">
                                Add to cart
                           </button>

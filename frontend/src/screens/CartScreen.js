@@ -76,7 +76,7 @@ const CartScreen = {
           <a href="/#/">
             <h3 style="margin-bottom: 1rem;">
                 <i class="fas fa-arrow-left"></i> 
-                Voltar
+                Home
             </h3>
           </a>
       </div>
@@ -89,7 +89,7 @@ const CartScreen = {
                    </li>
                    ${
                      cartItems.length === 0 ?
-                     '<div><h2><a href=""/#/>Carrinho vazio</a></h2></div>' :
+                     '<div style="text-align:center;"><h2 style="margin-bottom: 2rem;">Carrinho vazio  </h2><a href="/#/" style="color: #ec8816;"><i class="fas fa-cart-arrow-down"></i> Ir às compras!</a></div>' :
                       cartItems.map(item => `
                          <li>
                             <div class="cart-image">

@@ -28,6 +28,45 @@ li {
     color: #ec8816;
 }
 
+.overlay {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(16, 16, 16, .68);
+}
+
+.overlay.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+.overlay>div {
+    background: #ffffff;
+    color: #000000;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    max-width: 40rem;
+    width: 100%;
+    height: 1;
+    padding: 2rem;
+}
+
+.overlay>div>* {
+    margin: 2rem;
+}
+
+.overlay h2 {
+    color: #ff0000;
+}
+
 
 /* buttons */
 
@@ -39,6 +78,7 @@ button {
     outline: none;
     cursor: pointer;
     font-size: 1.6rem;
+    background: #d3d3d3;
 }
 
 button.primary {
@@ -133,7 +173,7 @@ header a:hover {
     flex: 0 1 30rem;
     margin: 5px 5px 30px 5px;
     height: 42rem;
-    border: .2rem solid #eeeeee;
+    border: .2rem solid #dadada;
     border-radius: 5px;
     overflow: hidden;
 }
@@ -241,7 +281,7 @@ header a:hover {
 }
 
 .details-action {
-    border: .1rem solid #eeeeee;
+    border: .1rem solid #dadada;
     border-radius: 5px;
     background: #f8f8f8;
     padding: 1rem;
@@ -262,7 +302,7 @@ header a:hover {
 
 .cart-action {
     flex: 1 1 20rem;
-    background: #f0f0f0;
+    border: .1rem solid #dadada;
     border-radius: 5px;
     padding: 1rem;
 }
@@ -280,7 +320,7 @@ header a:hover {
     justify-content: space-between;
     padding: 1rem;
     margin-bottom: 1rem;
-    border: .15rem solid #eeeeee;
+    border: .15rem solid #dadada;
     border-radius: 5px;
 }
 
@@ -341,7 +381,7 @@ header a:hover {
     flex-direction: column;
     width: 50rem;
     padding: 2rem;
-    border: .25rem solid #eeeeee;
+    border: .2rem solid #c5c5c5;
     border-radius: 5px;
     margin: auto;
 }
@@ -364,7 +404,7 @@ header a:hover {
 .form-items input {
     padding: 1rem;
     outline: none;
-    border: .15rem solid #e9e9e9;
+    border: .2rem solid #c5c5c5;
     font-size: 1.8rem;
     color: #858484;
     font-style: italic;
