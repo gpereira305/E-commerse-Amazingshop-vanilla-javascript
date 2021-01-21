@@ -55,7 +55,8 @@ li {
 }
 
 .overlay h2 {
-    color: #ff0000;
+    color: #ec8816;
+    text-align: center;
 }
 
 
@@ -400,6 +401,7 @@ header a:hover {
     justify-content: center;
     align-items: center;
     height: 100%;
+    margin: auto;
 }
 
 .form-items {
