@@ -1,58 +1,64 @@
-import axios from 'axios'; 
 import Ratings from '../components/Ratings';
-import { hideLoading, showLoading } from '../utils';
+import axios from "axios";
+import { parseRequestUrl } from '../../utils';
 
-
-const HomeScreen = {
-    render: async () => { 
-        showLoading();
+const HomeScreen = { 
+    render: async () => {
 
         const response = await axios({
-            url: 'http://localhost:5000/api/products',
-            headers: {
-                'Content-Type': 'application/json',
-            }
+          url: 'http://localhost:5000/api/products',
+          headers: {
+            'Content-Type': 'application/json',
+          },
         });
-        hideLoading();
-        
+
         if(!response || response.statusText !== 'OK'){
-            return `<div>Error in getting data</div>`;
+          return `<h2>Error in getting data</h2>`;
+
         }
-        const products =  response.data;
+        const products = response.data; 
+
 
         return `
-        <ul class="products">
+          <ul class="products">
             ${products.map(product => `
-               <li class="product-grid">
-                   <div class="product">
-                    <a href="/#/product/${product._id}">
-                        <img src="${product.image}" alt="${product.name}" />
-                    </a>
-                        <div class="product-main-details">
-                            <div class="product-name">
-                                <a href="/#/product/1">
-                                    ${product.name}
-                                </a>
-                            </div>
-                            <div class="product-rating">
-                               ${Ratings.render({
-                                   value: product.rating,
-                                   text: `${product.numReviews} reviews`,
-                               })}
-                            </div>
-                            <div class="product-brand">
-                                 ${product.brand}
-                            </div>
-                            <div class="product-price">
-                                R$ ${product.price}
-                            </div>
-                        </div>
-                    </div>
-                </li>
+               <li class="product-showcase">
+
+                  <div class="product">
+                     <a href="/#/product/${product._id}">
+                        <img src="${product.image}" alt="${product.name}"/>
+                     </a>
+                   <div class="product-info-list" style="padding: 0 .7rem;">
+                   <div class="product-name">
+                     <a href="/#/product/1">
+                          ${product.name}
+                     </a>
+                 
+                     <div class="product-ratings style="color: #ffc000;">
+                        ${Ratings.render({
+                          value: product.rating,
+                          text: `${product.numReviews} avaliações`
+                        })}
+                     </div>
+
+                      <div class="product-brand">
+                          ${product.brand}
+                      </div>
+
+                      <div class="product-price">
+                          R$ ${product.price} à vista
+                      </div>
+                      <div class="payment-option">
+                          <p style="margin-bottom: 1rem;">Ou em 6x sem juros</p>
+                      </div> 
+                    </div> 
+                </div>
+               </li> 
             `).join('\n')}
-        </ul>
-        `
-    }
+          </ul> 
+        `;
+    } 
 };
+
 
 export default HomeScreen;

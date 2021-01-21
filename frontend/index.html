@@ -2,32 +2,33 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="style.css">
-    <title>AmazonaShop</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>JS Amazona</title>
 </head>
 
 <body>
-    <div class="overlay" id="loading-overlay">
-        <h2 style="color: #ffff;">Aguarde, Carregando...</h2>
-    </div>
-
-    <div class="overlay" id="message-overlay"></div>
 
     <div class="grid-container">
-        <header id="header-container"></header>
-
-        <div class="container">
-            <main id="main-container"></main>
-
-        </div>
+        <!-- header -->
+        <header>
+            <div class="brand">
+                <a href="/#/">jsamazona</a>
+            </div>
+            <div>
+                <a href="/#/signin">Sign-In</a>
+                <a href="/#/cart">Cart</a>
+            </div>
+        </header>
+        <!-- main -->
+        <main id="main-container"></main>
         <footer>
             <p>&copy; 2020 AmazonaShop | All rights reserved</p>
         </footer>
-
     </div>
+    <!-- Javascript -->
     <script src="main.js"></script>
 </body>
 

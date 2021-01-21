@@ -6,7 +6,7 @@ const Ratings = {
         }
 
         return `
-            <div class="rating">
+            <div class="ratings">
                <span>
                   <i class="${
                       props.value >= 1 ?
