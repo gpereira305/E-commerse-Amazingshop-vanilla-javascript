@@ -53,6 +53,9 @@ const HomeScreen = {
                       <div class="payment-option">
                           <p style="margin-bottom: 1rem;">Ou em 6x sem juros</p>
                       </div> 
+                      <div style="color: green;">
+                          <p style="margin-bottom: 1rem;">Frete grátis acima de R$ 100.00</p>
+                      </div> 
                     </div> 
                 </div>
                </li> 

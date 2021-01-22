@@ -2,8 +2,8 @@ export default {
   
   products: [
     {
-      _id: '1',
-      name: 'Hiskywin Full Zip Running Shirts Thermal Workout',
+      _id: '111111111111111111111111',
+      name: 'Hiskywin - Full Zip Running Shirts Thermal Workout',
       category: 'Shirts',
       image: '/images/product-1.jpg',
       price: 59.99,
@@ -14,8 +14,8 @@ export default {
       countInStock: 6,
     },
     {
-      _id: '2',
-      name: 'Nike Full-Zip Hoodie Mens Workout Sweatshirt',
+      _id: '222222222222222222222222',
+      name: 'Nike - Full-Zip Hoodie Mens Workout Sweatshirt',
       category: 'Shirts',
       image: '/images/product-2.jpg',
       price: 79.99,
@@ -25,8 +25,8 @@ export default {
       numReviews: 51,
     },
     {
-      _id: '3',
-      name: 'Adidas Mens Long Sleeve Hoodie',
+      _id: '333333333333333333333333',
+      name: 'Adidas - Mens Long Sleeve Hoodie',
       category: 'Shirts',
       image: '/images/product-3.jpg',
       price: 59.99,
@@ -36,8 +36,8 @@ export default {
       numReviews: 45,
     },
     {
-      _id: '4',
-      name: 'Under Armour Mens Sportstyle Tricot Joggers',
+      _id: '4444444444444444444444444444',
+      name: 'Under Armour - Mens Sportstyle Tricot Joggers',
       category: 'Pants',
       image: '/images/product-4.jpg',
       price: 99.99,
@@ -49,7 +49,7 @@ export default {
     },
     {
       _id: '5',
-      name: 'Champion Mens Graphic Powerblend Fleece Jogger',
+      name: 'Champion - Mens Graphic Powerblend Fleece Jogger',
       category: 'Pants',
       image: '/images/product-5.jpg',
       price: 119.99,
@@ -61,7 +61,7 @@ export default {
     },
     {
       _id: '6',
-      name: 'Aelfric Eden Mens Joggers Pants Long Multi-Pockets',
+      name: 'Aelfric - Eden Mens Joggers Pants Long Multi-Pockets',
       category: 'Pants',
       image: '/images/product-6.jpg',
       price: 85.99,
@@ -73,7 +73,7 @@ export default {
     },
     {
       _id: '7',
-      name: 'Eden Mens Joggers Pants Long Multi-Pockets',
+      name: 'Eden - Mens Joggers Pants Long Multi-Pockets',
       category: 'Pants',
       image: '/images/product-7.jpg',
       price: 65.99,
@@ -85,7 +85,7 @@ export default {
     },
     {
       _id: '8',
-      name: 'Aelfric Eden Mens Joggers Pants Long ',
+      name: 'Aelfric - Eden Mens Joggers Pants Long ',
       category: 'Pants',
       image: '/images/product-8.jpg',
       price: 85.99,

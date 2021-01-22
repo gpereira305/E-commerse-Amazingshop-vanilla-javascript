@@ -26,6 +26,7 @@ const ProductScreen = {
               ${product.error} 
             </h2>`
          }
+  
          hideLoading();
 
          return `
@@ -69,16 +70,15 @@ const ProductScreen = {
                             ${
                               product.countInStock > 0
                                ? `<span class="success">Disponível</span>`
-                               : `<span class="error">Indisponível</span>`
+                               : `<span class="error">Indisponível</span>` 
                             } 
                          </li>
                         
                          <li>
-                            <button id="add-button"
-                               class="primary">
-                               Comprar
-                               <i class="fas fa-cart-arrow-down"></i>
-                            </button>
+                         <button id="add-button" class="primary" >
+                              Comprar
+                              <i class="fas fa-cart-arrow-down"></i>
+                        </button>
                          </li>
                       </ul>
                    </div>

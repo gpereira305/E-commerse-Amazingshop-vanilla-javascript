@@ -63,10 +63,16 @@ const CartScreen = {
 
             }
 
-          });
+          }); 
 
-          document.getElementById('checkout-button').addEventListener('click', () => {
-             document.location.hash = '/signin';
+          // If the cart is empty then checkout button will be disabled
+          const checkoutBtn = document.getElementById('checkout-button') 
+          if(getCartItems().length  !== 0)  checkoutBtn.disabled = false;
+          
+
+          checkoutBtn.addEventListener('click', () => { 
+            document.location.hash = '/signin';
+ 
           });
        });
 
@@ -110,11 +116,11 @@ const CartScreen = {
                           cartItems.map(item =>`
                            <li>
                               <div class="cart-image">
-                                 <img src="${item.image}" alt="${item.name}"/>
+                                 <a href="/#/"><img src="${item.image}" alt="${item.name}"/></a>
                               </div>
 
                                <div class="cart-name">
-                                  <div>
+                                  <div style="text-transform: uppercase;">
                                      <a href="/#/product/${item.product}">
                                        ${item.name}
                                      </a>
@@ -150,22 +156,23 @@ const CartScreen = {
           </div>
 
            <div class="cart-action">
-              <h3 style="margin-bottom: 2rem;">
+              <h3 style="margin-bottom: 2rem; text-transform: uppercase;">
                 Subtotal: ${cartItems.reduce((accum, current) => accum + current.qty, 0)} itens 
               </h3>
-             <div>
-              Total a pagar:
-
+             <div style="text-transform: uppercase;">
+              Total a pagar: 
               <h2 style="margin:1.5rem 0 0; color: #ffc000" >
                 R$ ${cartItems.reduce((accum, current) => 
                 accum + current.price * current.qty, 0).toFixed(2)} à vista 
               </h2>
       
              </div>
-             <p style="margin-bottom: 3rem;">Ou em 6x sem juros</p>
-
-              <button id="checkout-button" class="primary fw">
-                Finalizar compra
+             <div style="margin-bottom: 3rem;">
+                  <p style="margin-bottom: 1.5rem;">Ou em 6x sem juros</p> 
+                  <p>Frete grátis acima de R$ 100.00</p> 
+             </div>
+              <button id="checkout-button" class="primary fw" disabled>
+                Checkout
                 <i class="fas fa-cart-arrow-down"></i>
               </button>
            </div>

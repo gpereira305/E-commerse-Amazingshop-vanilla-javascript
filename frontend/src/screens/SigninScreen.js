@@ -1,4 +1,4 @@
-import { hideLoading, showLoading, showMessage } from "../../utils";
+import { hideLoading, redirectUser, showLoading, showMessage } from "../../utils";
 import { signin } from "../api";
 import { getUserInfo, setUserInfo } from "../localStorage";
 
@@ -15,13 +15,12 @@ const SigninScreen = {
                 password: document.getElementById('password').value,
             });
             hideLoading();
-
             if(data.error){
                 showMessage(data.error);
 
             }else{
                 setUserInfo(data);
-                document.location.hash = '/';
+                redirectUser();
             }
         });
 
@@ -29,7 +28,7 @@ const SigninScreen = {
 
     render: () => {
         if(getUserInfo().name){
-            document.location.hash = '/';
+            redirectUser();
         }
 
         return `

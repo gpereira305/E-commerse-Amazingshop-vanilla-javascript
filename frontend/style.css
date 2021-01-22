@@ -12,7 +12,7 @@ html {
 
 a {
     text-decoration: none;
-    color: #000000;
+    color: #424242;
 }
 
 li {
@@ -27,7 +27,7 @@ li {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(16, 16, 16, .68);
+    background: rgba(43, 43, 43, 0.68);
 }
 
 .overlay.active {
@@ -179,7 +179,7 @@ header a:hover {
 .products li {
     flex: 0 1 30rem;
     margin: 5px 5px 30px 5px;
-    height: 55rem;
+    height: 50rem;
     border: .2rem solid #dadada;
     border-radius: 5px;
     overflow: hidden;
@@ -200,7 +200,7 @@ header a:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 100%;
+    /* height: 100%; */
     background: #ffffff;
 }
 
@@ -228,13 +228,13 @@ header a:hover {
 }
 
 .product-brand {
-    font-size: 1.5rem;
-    color: #808080
+    font-size: 1.3rem;
+    color: #808080;
+    text-transform: uppercase;
 }
 
 .product-price {
     font-size: 2.3rem;
-    /* padding-bottom: 2.5rem; */
     margin-top: 1rem;
     color: #ffc000;
 }
@@ -267,13 +267,11 @@ header a:hover {
     flex: 2 1 60rem;
     margin: 0 1.5rem 1.5rem 0;
     margin-top: 0;
-    border: .2rem solid #ececec;
-    border-radius: 5px;
 }
 
 .details-image img {
     /* max-width: 55rem; */
-    max-width: 82rem;
+    max-width: 70rem;
     width: 100%;
 }
 
@@ -293,6 +291,8 @@ header a:hover {
 .details-info h1 {
     font-size: 2rem;
     margin: 0;
+    color: #424242;
+    text-transform: uppercase;
 }
 
 .details-info li,
@@ -321,8 +321,6 @@ header a:hover {
 .cart-list {
     flex: 2 1 10rem;
     margin-right: 1rem;
-    border: .1rem solid #dadada;
-    border-radius: 5px;
 }
 
 .cart-action {
@@ -363,6 +361,10 @@ header a:hover {
     flex: 1 1;
 }
 
+.cart-image img {
+    width: 100%;
+}
+
 .cart-name {
     flex: 2;
 }
@@ -371,13 +373,14 @@ header a:hover {
     padding: .5rem;
 }
 
-.cart-price {
-    flex: 1 1;
-    text-align: right;
+.cart-item {
+    line-height: 1.5;
+    /* text-transform: uppercase; */
 }
 
 .cart-list h3 {
     margin: 0;
+    text-transform: uppercase;
 }
 
 .cart-list h2 {
@@ -389,7 +392,7 @@ header a:hover {
 .cart-list button,
 .cart-list select {
     font-size: 1.3rem;
-    padding: .8rem 2rem;
+    padding: 1.02rem 2.3rem;
     width: 12rem;
 }
 
@@ -397,9 +400,9 @@ header a:hover {
 /* Signin form */
 
 .form-container {
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     height: 100%;
     margin: auto;
 }
@@ -440,6 +443,94 @@ header a:hover {
 
 .form-items a {
     color: #f84f4f;
+}
+
+
+/* CHECKOUT SCREEN / checkout steps */
+
+.checkout-steps {
+    display: flex;
+    justify-content: space-between;
+    width: 50rem;
+    margin: 3rem auto;
+    margin-bottom: 12rem;
+}
+
+.checkout-steps>div {
+    border-top: .3rem #c0c0c0 solid;
+    color: #c0c0c0;
+    flex: 1 1;
+    padding-top: 1rem;
+}
+
+.checkout-steps>div.active {
+    color: #ec5b07;
+    border-top-color: #ec5b07;
+}
+
+
+/* PLACE ORDER SCREEN */
+
+.order {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    justify-content: space-between;
+}
+
+.order h2 {
+    margin: 0;
+}
+
+.order-info {
+    flex: 3 1 50rem;
+}
+
+.order-info>div {
+    margin: 1rem;
+}
+
+.order-action {
+    flex: 1 1 20rem;
+    padding: 1rem;
+}
+
+
+/* .order-action>ul {
+    padding: 0;
+} */
+
+.order-action li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.order-action .total {
+    font-size: 2rem;
+    color: #ff0000;
+    margin-top: 8rem;
+    text-transform: uppercase;
+}
+
+.order-summary {
+    border: .2rem solid #dadada;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.order-header,
+.cart-products {
+    border: .2rem solid #dadada;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    padding: .5rem;
+}
+
+.order-data {
+    display: flex;
+    justify-content: center;
+    margin: 8rem 0 2rem;
 }
 
 

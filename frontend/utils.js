@@ -1,3 +1,5 @@
+import { getCartItems } from "./src/localStorage";
+
 
 export const parseRequestUrl = () => {
      const url = document.location.hash.toLowerCase();
@@ -44,3 +46,17 @@ export  const showMessage = (message, callback) => {
     });
 
 };
+
+
+// checks if the user have items in the 
+//shopping cart before redirect him to homepage
+export const redirectUser = () => {
+    if(getCartItems().length !== 0){
+        document.location.hash = '/shipping';
+
+    }else{
+        document.location.hash = '/';
+       
+    }
+
+}; 
