@@ -50,11 +50,23 @@ const RegisterScreen = {
                       </li>
                       <li>
                          <label for="password">Senha</label>
-                         <input type="password name="password" id="password" required/>
+                         <input 
+                            type="password 
+                            name="password" 
+                            id="password" 
+                            minlength="6"
+                            required
+                         />
                       </li>
                       <li>
                          <label for="repassword">Confirmar senha</label>
-                         <input type="password name="repassword" id="repassword" required/>
+                         <input 
+                           type="password
+                           name="repassword" 
+                           id="repassword" 
+                           minlength="6"
+                           required
+                         />
                       </li>
                       <li>
                          <button type="submit" class="primary">Registar</button> 

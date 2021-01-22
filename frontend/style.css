@@ -396,13 +396,22 @@ header a:hover {
     width: 12rem;
 }
 
+.empty-cart {
+    display: flex;
+    margin: auto;
+    font-size: 3rem;
+    flex-direction: column;
+    text-align: center;
+}
+
+.empty-cart a {
+    color: #ec8816;
+}
+
 
 /* Signin form */
 
 .form-container {
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
     height: 100%;
     margin: auto;
 }
@@ -474,7 +483,6 @@ header a:hover {
 .order {
     display: flex;
     flex-wrap: wrap;
-    padding: 1rem;
     justify-content: space-between;
 }
 
@@ -531,6 +539,92 @@ header a:hover {
     display: flex;
     justify-content: center;
     margin: 8rem 0 2rem;
+}
+
+
+/* ORDER SCREEN */
+
+.order-number {
+    padding: 1rem;
+    margin-top: 5rem;
+    display: flex;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.order-number>p {
+    font-style: italic;
+    font-weight: lighter;
+    margin-left: 1rem;
+}
+
+
+/* PROFILE SCREEN / orders status */
+
+.profile {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-top: 6rem;
+    margin: 8rem auto;
+}
+
+.purchase-history {
+    text-align: center;
+    margin-top: 5rem;
+    color: #ec8816;
+}
+
+.purchase-history a {
+    color: #ec8816;
+}
+
+
+/* MY ORDERS SCREEN  */
+
+.profile-info {
+    flex: 1 1 25rem;
+}
+
+.profile-orders {
+    flex: 3 1 20rem;
+    margin-left: 1rem;
+}
+
+.table-orders {
+    text-transform: uppercase;
+    font-size: 1.7rem;
+}
+
+.orders-info {
+    font-size: 18px;
+    border: 2px solid #c5c5c5;
+    border-radius: 5px;
+}
+
+.orders-info>thead {
+    background: #203040;
+    color: #fff;
+}
+
+.orders-info>th,
+td {
+    border: 2px solid#c5c5c5;
+    padding: 2rem .2rem 0;
+    text-align: left;
+}
+
+.history-orders {
+    display: flex;
+    flex-direction: column;
+    margin: 4rem auto;
+    width: 85%;
+}
+
+.history-orders h2 {
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 1.5rem;
 }
 
 

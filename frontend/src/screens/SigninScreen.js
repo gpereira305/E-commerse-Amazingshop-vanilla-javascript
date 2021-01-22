@@ -6,7 +6,6 @@ const SigninScreen = {
     after_render: () => {
         document.getElementById('signin-form')
         .addEventListener('submit', async(e) => {
-
             e.preventDefault();
             showLoading();
 
@@ -44,7 +43,13 @@ const SigninScreen = {
                       </li>
                       <li>
                          <label for="password">Senha</label>
-                         <input type="password name="password" id="password" required/>
+                         <input 
+                            type="password 
+                            name="password" 
+                            id="password" 
+                            minlength="6"
+                            required
+                         />
                       </li>
                       <li>
                          <button type="submit" class="primary">Entrar</button> 

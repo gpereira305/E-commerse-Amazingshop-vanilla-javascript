@@ -102,17 +102,22 @@ const CartScreen = {
 
            <div class="cart-list">
                <ul class="cart-list-container">
-                  <li style="border: none;">
-                  <button class="go-back"> 
-                      <i class="fas fa-chevron-left"></i>
-                      <a href="/#/">Voltar</a>
-                  </button>
+                  <li style="border: none;"> 
+
+                     <div style="color:#ec8816">
+                        <i class="fas fa-chevron-left"></i>
+                         <a href="/#/" style="color:#ec8816">Voltar</a> 
+                     </div>
+
                       <h3>Itens no carrinho</h3>
                       <h3>Preço unitário</h3>
                       <li style="border: none;">
                         ${
-                          cartItems.length === 0 ?
-                          '<div><h2>Carinho vazio</h2><p><a href="/#/">Ir às compras</a></p></div>' :
+                          cartItems.length === 0 
+                          ? 
+                            '<div class="empty-cart"><h2>Carinho vazio</h2><p><a href="/#/"><i class="fas fa-shopping-cart"></i> Ir às compras</a></p></div>'
+                           
+                           :
                           cartItems.map(item =>`
                            <li>
                               <div class="cart-image">

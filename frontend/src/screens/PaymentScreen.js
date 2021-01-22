@@ -29,35 +29,62 @@ const PaymentScreen = {
               <form id="payment-form">
                   <ul class="form-items">
                       <li>
-                         <h1>Forma de pagamanto</h1>
+                         <h1>Formas de pagamanto</h1>
                       </li> 
                        <li>
                            <div style="display: flex">
                                <input 
                                  type="radio"
                                  name="payment-method"
-                                 id="paypal"
-                                 value="Paypal"
+                                 id="cartão de crédito"
+                                 value="cartão de crédito"
                                  checked
                                />  
-                               <label for="paypal">
-                                   <h3 style="margin-left: 1rem">Paypal</h3>
+                               <label for="cartão de crédito">
+                                   <h3 style="margin-left: 1rem">Cartão de crédito</h3>
                                </label>
-                           </div>
-                         </li>
+                             </div>
+                          </li>
                        <li>
                            <div style="display: flex">
                                <input 
                                  type="radio"
                                  name="payment-method"
-                                 id="stripe"
-                                 value="Stripe" 
-                               />
-                               <label for="stripe">
-                                      <h3 style="margin-left: 1rem">Stripe</h3>
+                                 id="cartão de débito"
+                                 value="cartão de débito" 
+                               />  
+                               <label for="cartão de débito">
+                                   <h3 style="margin-left: 1rem">Cartão de débito</h3>
                                </label>
-                           </div>
-                         </li>
+                             </div>
+                          </li>
+                       <li>
+                           <div style="display: flex">
+                               <input 
+                                 type="radio"
+                                 name="payment-method"
+                                 id="boleto"
+                                 value="boleto" 
+                               />  
+                               <label for="boleto">
+                                   <h3 style="margin-left: 1rem">Boleto</h3>
+                               </label>
+                             </div>
+                          </li>
+                       <li>
+                           <div style="display: flex">
+                               <input 
+                                 type="radio"
+                                 name="payment-method"
+                                 id="depósito"
+                                 value="depósito" 
+                               />  
+                               <label for="depósito">
+                                   <h3 style="margin-left: 1rem">Depósito</h3>
+                               </label>
+                             </div>
+                          </li>
+
                       <li>
                          <button type="submit" class="primary">Continuar</button> 
                       </li>  

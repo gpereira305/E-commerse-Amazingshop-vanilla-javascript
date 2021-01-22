@@ -31,11 +31,9 @@ const ProductScreen = {
 
          return `
             <div class="content">
-               <div class="back-to-result">
-                  <button class="go-back"> 
+               <div>   
                   <i class="fas fa-chevron-left"></i>
-                  <a href="/#/">Voltar</a>
-                  </button>
+                  <a href="/#/">Voltar</a> 
                </div>
 
                <div class="details">

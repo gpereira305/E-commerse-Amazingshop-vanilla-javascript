@@ -10,12 +10,15 @@ import ProfileScreen from "./screens/ProfileScreen";
 import ShippingScreen from "./screens/ShippingScreen";
 import PaymentScreen from "./screens/PaymentScreen";
 import PlaceOrderScreen from "./screens/PlaceOrderScreen";
+import OrderScreen from "./screens/OrderScreen";
+import MyOrdersScreen from "./screens/MyOrdersScreen";
 
 
 
 const routes = {
     '/': HomeScreen,
     '/product/:id': ProductScreen,
+    '/order/:id': OrderScreen,
     '/cart/:id': CartScreen,
     '/cart': CartScreen,
     '/signin': SigninScreen,
@@ -24,6 +27,7 @@ const routes = {
     '/shipping' : ShippingScreen,
     '/payment' : PaymentScreen,
     '/placeorder' : PlaceOrderScreen,
+    '/mylistorder' : MyOrdersScreen,
 };
 
 

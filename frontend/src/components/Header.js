@@ -1,33 +1,31 @@
-import { getUserInfo } from "../localStorage";
+import {getUserInfo } from "../localStorage";
 
 
-const Header = {
-    render: () => {
-        const { name } = getUserInfo();
+const Header = { 
+  
+  after_render: () => {  
+    
+  },
 
+    render: () => {  
+      const { name } = getUserInfo();  
+    
         return `
-          <div class="brand">
-            <a href="/#/">jsamazona</a>
-          </div>
-          <div>
-          ${
-             name 
-             
-             ? `<a href="/#/profile" 
-                       style="font-style: italic;
-                       font-size: 1.6rem; 
-                       color: #ec8816;">
-                       ${name}
-                </a>`
-             :`<i class="fas fa-user"></i><a href="/#/signin">Log In</a>`
-           }
-           <i class="fas fa-shopping-cart"></i><a href="/#/cart">Cart</a>
-          </div> 
+        <div class="brand">
+              <a href="/#/">ArizonaShop</a>
+         </div>
+            <div>
+              ${
+                name
+                  ? `<a href="/#/profile">${name}`
+                  : `<a href="/#/signin"><i class="fas fa-user"></i> Logar</a>` 
+              }
+              
+            <a href="/#/cart"><i class="fas fa-shopping-cart"></i> Carrinho</a>
+      </div>
         `;
-    },
-    after_render: () => {
-
-    } 
+    }
+  
 };
 
-export default Header;
+export default Header; 
