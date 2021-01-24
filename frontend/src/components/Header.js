@@ -8,7 +8,7 @@ const Header = {
   },
 
     render: () => {  
-      const { name } = getUserInfo();  
+      const { name, isAdmin } = getUserInfo();  
     
         return `
         <div class="brand">
@@ -19,9 +19,12 @@ const Header = {
                 name
                   ? `<a href="/#/profile">${name}`
                   : `<a href="/#/signin"><i class="fas fa-user"></i> Logar</a>` 
-              }
-              
+               }
+               ${
+                isAdmin ? `<a href="/#/dashboard">Admin</a>` : '' 
+               } 
             <a href="/#/cart"><i class="fas fa-shopping-cart"></i> Carrinho</a>
+
       </div>
         `;
     }

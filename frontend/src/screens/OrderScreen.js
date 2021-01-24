@@ -61,14 +61,14 @@ import { clearCart} from '../localStorage';
              <div class="order">
                   <div class="order-info">
                       <div class="order-header">
-                         <h2 style="margin-bottom: 1rem; text-transform: uppercase;">Endereço de entrega</h2>
+                         <h3 style="margin-bottom: 1rem; text-transform: uppercase;">Endereço de entrega</h3>
                          <div style="text-transform: capitalize; color: grey; font-weight: lighter;">
                              ${shipping.address} -
                              ${shipping.city} -
                              ${shipping.postalCode} -
                              ${shipping.country}
                          </div>
-                          <h2 style="margin: 1rem 0; text-transform: uppercase;"> Previsão de entrega:</h2>
+                          <h3 style="margin: 1rem 0; text-transform: uppercase;"> Previsão de entrega:</h3>
                           <div>
                              ${
                                 isDelivered 
@@ -79,7 +79,7 @@ import { clearCart} from '../localStorage';
                       </div>
 
                       <div class="order-header">
-                           <h2 style="margin-bottom: 2rem; text-transform: uppercase;">Pagamento</h2>
+                           <h3 style="margin-bottom: 2rem; text-transform: uppercase;">Pagamento</h3>
                            <div>
                                Forma de pagamento: ${payment.paymentMethod}
                            </div>

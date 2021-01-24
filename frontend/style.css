@@ -87,6 +87,8 @@ button.primary:hover {
     background: #c20303;
     border: .15rem solid #c20303;
     transition: all .3s ease;
+    padding: .5rem 1rem;
+    font-size: 1.3rem;
 }
 
 .delete-button:hover {
@@ -179,7 +181,7 @@ header a:hover {
 .products li {
     flex: 0 1 30rem;
     margin: 5px 5px 30px 5px;
-    height: 50rem;
+    height: 45rem;
     border: .2rem solid #dadada;
     border-radius: 5px;
     overflow: hidden;
@@ -462,7 +464,7 @@ header a:hover {
     justify-content: space-between;
     width: 50rem;
     margin: 3rem auto;
-    margin-bottom: 12rem;
+    margin-bottom: 3rem;
 }
 
 .checkout-steps>div {
@@ -538,7 +540,7 @@ header a:hover {
 .order-data {
     display: flex;
     justify-content: center;
-    margin: 8rem 0 2rem;
+    margin: 5rem 0 2rem;
 }
 
 
@@ -582,6 +584,23 @@ header a:hover {
 
 /* MY ORDERS SCREEN  */
 
+.myOrders-info {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    text-align: center;
+}
+
+.myOrders-info h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.myOrders-info a {
+    color: #ec8816;
+    font-size: 2.5rem;
+}
+
 .profile-info {
     flex: 1 1 25rem;
 }
@@ -594,6 +613,11 @@ header a:hover {
 .table-orders {
     text-transform: uppercase;
     font-size: 1.7rem;
+}
+
+.table-orders td {
+    padding: .8rem .3rem;
+    font-size: 1.3rem;
 }
 
 .orders-info {
@@ -610,7 +634,7 @@ header a:hover {
 .orders-info>th,
 td {
     border: 2px solid#c5c5c5;
-    padding: 2rem .2rem 0;
+    /* padding: .5rem .2rem 0; */
     text-align: left;
 }
 
@@ -625,6 +649,191 @@ td {
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 1.5rem;
+}
+
+
+/* DASHBOARD SCREEN */
+
+.summary-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+
+.summary-items>li {
+    border: .2rem solid #d6d6d6;
+    margin: 2rem;
+    border-radius: 5px;
+    flex: 1 1 20rem;
+}
+
+.summary-title {
+    background: #e0e0e0;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.summary-title.color1 {
+    background: #f0e0e0;
+}
+
+.summary-title.color2 {
+    background: #e0f0e0;
+}
+
+.summary-title.color3 {
+    background: #e0e0f0;
+}
+
+.summary-body {
+    font-size: 4rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+
+/*dashboard Menu*/
+
+.dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    width: 100%;
+    margin-top: 6rem;
+}
+
+.dashboard-header {
+    display: flex;
+    margin-bottom: 4rem;
+}
+
+.dashboard-header h1 {
+    flex: 1 50rem;
+}
+
+.dashboard-header button {
+    flex: 1 20rem;
+}
+
+.dashboard h1 {
+    margin: 0 2rem;
+}
+
+.dashboard-menu {
+    flex: 1 1 20rem;
+    background: #f0f0f0;
+}
+
+.dashboard-menu ul {
+    padding: 0;
+}
+
+.dashboard-menu a {
+    display: flex;
+    padding: 1rem;
+    padding-left: 2rem;
+    justify-content: space-between;
+}
+
+.dashboard-menu a:hover {
+    background: #c0c0c0;
+}
+
+.dashboard-menu li.selected a {
+    background: #c0c0c0;
+    color: #f08040;
+}
+
+.dashboard-content {
+    flex: 4 1 70rem;
+    padding: 1rem;
+    padding-top: 0;
+}
+
+
+/* PRODUCT LIST SCREEN */
+
+.product-list table {
+    width: 100%;
+}
+
+.product-list td {
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.product-list button {
+    font-size: 1.3rem;
+    padding: .8rem;
+}
+
+.edit-button {
+    background: #203040;
+    color: #fff;
+    transition: all .3s ease;
+    font-size: 1.3rem;
+}
+
+.edit-button:hover {
+    background: #293d52;
+}
+
+.delete-button {
+    background: #c20303;
+}
+
+
+/* PRODUCT EDIT SCREEN */
+
+.product-edit-page {
+    display: flex;
+    margin: 2rem auto;
+}
+
+.product-edit-page .goto-products {
+    font-size: 2rem;
+    color: #f08040;
+}
+
+.product-edit-page .goto-products a {
+    margin-right: 4rem;
+    color: #f08040;
+}
+
+.edit-header {
+    text-align: center;
+}
+
+.edit-header h1 {
+    margin-bottom: 1rem;
+}
+
+.edit-header h3 {
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: lighter;
+    font-size: 1.6rem;
+}
+
+
+/* ORDER SCREEN */
+
+.order-list table {
+    width: 100%;
+}
+
+.order-list td {
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.order-list button {
+    font-size: 1.3rem;
+    padding: .8rem;
 }
 
 

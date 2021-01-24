@@ -12,11 +12,16 @@ import PaymentScreen from "./screens/PaymentScreen";
 import PlaceOrderScreen from "./screens/PlaceOrderScreen";
 import OrderScreen from "./screens/OrderScreen";
 import MyOrdersScreen from "./screens/MyOrdersScreen";
+import DashBoardScreen from "./screens/DashboardScreen"; 
+import ProductListScreen from "./screens/ProductListScreen";
+import ProductEditScreen from "./screens/ProductEditScreen";
+import OrderListScreen from "./screens/OrderListScreen";
 
 
 
 const routes = {
     '/': HomeScreen,
+    '/product/:id/edit': ProductEditScreen,
     '/product/:id': ProductScreen,
     '/order/:id': OrderScreen,
     '/cart/:id': CartScreen,
@@ -28,6 +33,9 @@ const routes = {
     '/payment' : PaymentScreen,
     '/placeorder' : PlaceOrderScreen,
     '/mylistorder' : MyOrdersScreen,
+    '/dashboard' : DashBoardScreen,
+    '/productlist' : ProductListScreen,
+    '/orderlist': OrderListScreen,
 };
 
 

@@ -98,68 +98,67 @@ const CartScreen = {
 
         const cartItems = getCartItems();
         return ` 
-        <div class="cart">
 
-           <div class="cart-list">
-               <ul class="cart-list-container">
-                  <li style="border: none;"> 
+               ${ cartItems.length === 0 ? 
+                  `<div class="empty-cart"><h2>Carrinho vazio</h2><p><a href="/#/"><i class="fas fa-shopping-cart"></i> Ir às compras</a></p></div>`
+                  :
+               ` <div class="cart">
 
-                     <div style="color:#ec8816">
-                        <i class="fas fa-chevron-left"></i>
-                         <a href="/#/" style="color:#ec8816">Voltar</a> 
-                     </div>
+                  <div class="cart-list">
+                     <ul class="cart-list-container">
+                        <li style="border: none;"> 
 
-                      <h3>Itens no carrinho</h3>
-                      <h3>Preço unitário</h3>
-                      <li style="border: none;">
-                        ${
-                          cartItems.length === 0 
-                          ? 
-                            '<div class="empty-cart"><h2>Carinho vazio</h2><p><a href="/#/"><i class="fas fa-shopping-cart"></i> Ir às compras</a></p></div>'
-                           
-                           :
-                          cartItems.map(item =>`
-                           <li>
-                              <div class="cart-image">
-                                 <a href="/#/"><img src="${item.image}" alt="${item.name}"/></a>
-                              </div>
+                           <div style="color:#ec8816">
+                              <i class="fas fa-chevron-left"></i>
+                              <a href="/#/" style="color:#ec8816">Voltar</a> 
+                           </div>
 
-                               <div class="cart-name">
-                                  <div style="text-transform: uppercase;">
-                                     <a href="/#/product/${item.product}">
-                                       ${item.name}
-                                     </a>
-                                  </div>
+                           <h3>Itens no carrinho</h3>
+                           <h3>Preço unitário</h3>
+                           <li style="border: none;">
+                              ${
+                                 cartItems.map(item =>`
+                                 <li>
+                                    <div class="cart-image">
+                                       <a href="/#/"><img src="${item.image}" alt="${item.name}"/></a>
+                                    </div>
 
-                                  <div>
-                                     Quantidade:
-                                     <select class="qty-select" id="${item.product}">
-                                        ${
-                                           [...Array(item.countInStock).keys()].map(x =>
-                                            item.qty === x + 1 ? `
-                                            <option selected value="${x + 1}">${x + 1}</option>` : 
-                                            `<option value="${x + 1}">${x + 1}</option>`
-                                            )}
-                                     </select>
-                                     <button 
-                                        type="button" 
-                                        class="delete-button"
-                                        id="${item.product}">
-                                        Deletar
-                                     </button>
-                                  </div>
-                               </div>
+                                    <div class="cart-name">
+                                       <div style="text-transform: uppercase;">
+                                          <a href="/#/product/${item.product}">
+                                             ${item.name}
+                                          </a>
+                                       </div>
 
-                               <div class="cart-price">
-                                 R$ ${item.price}
-                               </div>
+                                       <div>
+                                          Quantidade:
+                                          <select class="qty-select" id="${item.product}">
+                                             ${
+                                                [...Array(item.countInStock).keys()].map(x =>
+                                                   item.qty === x + 1 ? `
+                                                   <option selected value="${x + 1}">${x + 1}</option>` : 
+                                                   `<option value="${x + 1}">${x + 1}</option>`
+                                                   )}
+                                          </select>
+                                          <button 
+                                             type="button" 
+                                             class="delete-button"
+                                             id="${item.product}">
+                                             Deletar
+                                          </button>
+                                       </div>
+                                    </div>
+
+                                    <div class="cart-price">
+                                       R$ ${item.price}
+                                    </div>
+                                 </li>
+                                 `).join('\n')}
                            </li>
-                          `).join('\n')}
-                      </li>
-                  </li>
-               </ul>
-          </div>
-
+                        </li>
+                     </ul>
+               </div>
+                  
            <div class="cart-action">
               <h3 style="margin-bottom: 2rem; text-transform: uppercase;">
                 Subtotal: ${cartItems.reduce((accum, current) => accum + current.qty, 0)} itens 
@@ -168,7 +167,7 @@ const CartScreen = {
               Total a pagar: 
               <h2 style="margin:1.5rem 0 0; color: #ffc000" >
                 R$ ${cartItems.reduce((accum, current) => 
-                accum + current.price * current.qty, 0).toFixed(2)} à vista 
+                accum + current.price * current.qty, 0).toFixed(2)} à vista
               </h2>
       
              </div>
@@ -182,9 +181,10 @@ const CartScreen = {
               </button>
            </div>
      
-        </div>
+        </div>`
+                }
         `;
-
+                
     },
 };
 

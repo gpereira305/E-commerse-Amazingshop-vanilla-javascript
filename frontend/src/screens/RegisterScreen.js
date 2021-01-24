@@ -69,7 +69,7 @@ const RegisterScreen = {
                          />
                       </li>
                       <li>
-                         <button type="submit" class="primary">Registar</button> 
+                         <button type="submit" class="primary">Registrar</button> 
                       </li>
 
                        <li>

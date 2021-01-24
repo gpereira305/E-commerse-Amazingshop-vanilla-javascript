@@ -37,7 +37,7 @@ const ShippingScreen = {
               <form id="shipping-form">
                   <ul class="form-items">
                       <li>
-                         <h1>Frete</h1>
+                         <h1>Dados do cliente</h1>
                       </li>
                       <li>
                          <label for="address">Endereço</label>

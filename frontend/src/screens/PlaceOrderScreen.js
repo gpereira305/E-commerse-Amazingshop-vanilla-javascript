@@ -24,7 +24,7 @@ const convertCartToOrders = () => {
 
     const itemsPrice = orderItems.reduce((accum, current) => 
     accum + current.price * current.qty, 0)
-    const shippingPrice = itemsPrice > 100 ? 0 : 10;
+    const shippingPrice = itemsPrice > 100 ? 0 : 8.50;
     const taxPrice = Math.round(0.05 * itemsPrice * 100) / 100;
     const totalPrice = (itemsPrice + shippingPrice + taxPrice);  
     

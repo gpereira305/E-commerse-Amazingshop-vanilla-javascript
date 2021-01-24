@@ -1,46 +1,9 @@
-// import config from "./config";
-// import jwt from 'jsonwebtoken';
-
-
-// export const generateToken = (user) => {
-//     return jwt.sign({
-
-//         _id: user._id,
-//         name: user.name,
-//         email: user.email,
-//         isAdmin: user.isAdmin,
-//     }, 
-//     config.JWT_SECRET
-//     ) 
-// };
-
-// // Only the owner of the account can update it
-// export const isAuth = (req, res, next) => {
-//     const bearerToken = req.headers.authorization;
-
-//     const invalidToken = res.status(401).send({ message: 'Token inválido'});
-
-//     if(!bearerToken){
-//         invalidToken();
-
-//     }else{
-//         const  token = bearerToken.slice(7, bearerToken.length);
-//         jwt.verify(token, config.JWT_SECRET, (err, data) => {
-
-//             if(err){
-//                 invalidToken();
-
-//             }else{
-//                 req.user = data;
-//                 next();
-//             }
-//         });
-//     }
-
-// };
-
 import jwt from 'jsonwebtoken';
 import config from './config';
+
+
+
+
 
 export const generateToken = (user) => {
   return jwt.sign(
@@ -53,11 +16,15 @@ export const generateToken = (user) => {
     config.JWT_SECRET
   );
 };
+
+
+
+
 export const isAuth = (req, res, next) => { 
   const bearerToken = req.headers.authorization;
  
   if (!bearerToken) { 
-    res.status(401).send({ message: 'Token inválido' }); 
+    res.status(401).send({ message: 'Token não fornecido' }); 
     
   } else {
     const token = bearerToken.slice(7, bearerToken.length);
@@ -73,3 +40,17 @@ export const isAuth = (req, res, next) => {
     });
   }
 };
+
+
+
+export const isAdmin = (req, res, next) => {
+
+  if(req.user && req.user.isAdmin){
+    next();
+
+  }else{
+    res.status(401).send({ message: 'token inválido para usuário admin'})
+  }
+};
+
+

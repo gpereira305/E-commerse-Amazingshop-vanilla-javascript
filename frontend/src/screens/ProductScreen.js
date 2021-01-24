@@ -30,10 +30,10 @@ const ProductScreen = {
          hideLoading();
 
          return `
-            <div class="content">
-               <div>   
+            <div class="content" style="width:100%;">
+               <div style="color:#ec8816; margin-top: 4rem;">   
                   <i class="fas fa-chevron-left"></i>
-                  <a href="/#/">Voltar</a> 
+                  <a href="/#/" style="color:#ec8816">Voltar</a> 
                </div>
 
                <div class="details">
