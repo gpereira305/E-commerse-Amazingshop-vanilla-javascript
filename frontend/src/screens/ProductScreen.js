@@ -8,10 +8,10 @@ const ProductScreen = {
   after_render: async() => {
     const request = parseRequestUrl();
 
-    document.getElementById('add-button')
-     .addEventListener('click', () => {
-      document.location.hash = `/cart/${request.id}`;
-
+    const addButton = document.getElementById('add-button');
+    addButton.addEventListener('click', () => {
+      document.location.hash = `/cart/${request.id}`; 
+ 
     });
 
   },
@@ -31,9 +31,9 @@ const ProductScreen = {
 
          return `
             <div class="content" style="width:100%;">
-               <div style="color:#ec8816; margin-top: 4rem;">   
+               <div style="color:#b64606; margin-top: 4rem;">   
                   <i class="fas fa-chevron-left"></i>
-                  <a href="/#/" style="color:#ec8816">Voltar</a> 
+                  <a href="/#/" style="color:#b64606">Voltar</a> 
                </div>
 
                <div class="details">
@@ -73,10 +73,20 @@ const ProductScreen = {
                          </li>
                         
                          <li>
-                         <button id="add-button" class="primary" >
-                              Comprar
-                              <i class="fas fa-cart-arrow-down"></i>
-                        </button>
+                         ${
+                            product.countInStock !== 0
+                            ? ` 
+                            <button id="add-button" class="primary">
+                                Comprar
+                                <i class="fas fa-cart-arrow-down"></i>
+                             </button>`
+                            : `
+                             <button id="add-button" class="primary" disabled>
+                               Comprar
+                               <i class="fas fa-cart-arrow-down"></i>
+                             </button>
+                            `
+                             } 
                          </li>
                       </ul>
                    </div>

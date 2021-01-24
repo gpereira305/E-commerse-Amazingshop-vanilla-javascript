@@ -11,8 +11,12 @@ const HomeScreen = {
 
 
         return `
+
           <ul class="products">
-            ${products.map(product => `
+          <div class="main-banner">
+              <img src="/images/product-0.jpg" alt="banner"/>
+           </div>
+            ${products.map(product => ` 
                <li class="product-showcase">
 
                   <div class="product">
@@ -42,12 +46,12 @@ const HomeScreen = {
                       <div class="payment-option">
                           <p style="margin-bottom: 1rem;">Ou em 6x sem juros</p>
                       </div> 
-                      <div style="color: green;">
+                      <div style="color: #44bd32;">
                           <p style="margin-bottom: 1rem;">Frete grátis acima de R$ 100.00</p>
                       </div> 
                     </div> 
                 </div>
-               </li> 
+               </li>  
             `).join('\n')}
           </ul> 
         `;

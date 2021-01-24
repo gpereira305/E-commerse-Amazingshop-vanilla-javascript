@@ -16,7 +16,7 @@ import { clearCart} from '../localStorage';
 
          const confirmOrder = document.getElementById('order-confirmBtn')
          confirmOrder.addEventListener('click', () => { 
-               showMessage('<p style="color: green;">Pedido realizado com sucesso!</p>', () => {
+               showMessage('<p style="color: #44bd32;">Pedido realizado com sucesso!</p>', () => {
                   showLoading();
 
                   rerender(OrderScreen);

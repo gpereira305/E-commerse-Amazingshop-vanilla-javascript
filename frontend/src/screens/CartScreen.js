@@ -108,9 +108,9 @@ const CartScreen = {
                      <ul class="cart-list-container">
                         <li style="border: none;"> 
 
-                           <div style="color:#ec8816">
+                           <div style="color:#b64606">
                               <i class="fas fa-chevron-left"></i>
-                              <a href="/#/" style="color:#ec8816">Voltar</a> 
+                              <a href="/#/" style="color:#b64606">Voltar</a> 
                            </div>
 
                            <h3>Itens no carrinho</h3>
@@ -165,7 +165,7 @@ const CartScreen = {
               </h3>
              <div style="text-transform: uppercase;">
               Total a pagar: 
-              <h2 style="margin:1.5rem 0 0; color: #ffc000" >
+              <h2 style="margin:1.5rem 0 0; color: #b64606">
                 R$ ${cartItems.reduce((accum, current) => 
                 accum + current.price * current.qty, 0).toFixed(2)} à vista
               </h2>
@@ -173,7 +173,7 @@ const CartScreen = {
              </div>
              <div style="margin-bottom: 3rem;">
                   <p style="margin-bottom: 1.5rem;">Ou em 6x sem juros</p> 
-                  <p>Frete grátis acima de R$ 100.00</p> 
+                  <p style="color: #44bd32;">Frete grátis acima de R$ 100.00</p> 
              </div>
               <button id="checkout-button" class="primary fw" disabled>
                 Checkout

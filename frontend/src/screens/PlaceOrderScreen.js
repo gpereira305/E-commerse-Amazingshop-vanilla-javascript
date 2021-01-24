@@ -85,7 +85,7 @@ const PlaceOrderScreen = {
              <div class="order">
                   <div class="order-info">
                       <div class="order-header">
-                         <h2 style="margin-bottom: 2rem; text-transform: uppercase;">Enderço de entrega</h2>
+                         <h2 style="margin-bottom: 2rem; text-transform: uppercase;">Endereço de entrega</h2>
                          <div style="text-transform: capitalize; font-size: 1.3rem;">
                              ${shipping.address} -
                              ${shipping.city} -

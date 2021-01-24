@@ -12,7 +12,7 @@ const Header = {
     
         return `
         <div class="brand">
-              <a href="/#/">ArizonaShop</a>
+              <a href="/#/">Amazing <span style="color:#b64606;">Shop</span></a>
          </div>
             <div>
               ${

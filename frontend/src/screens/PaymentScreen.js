@@ -37,7 +37,7 @@ const PaymentScreen = {
                                  type="radio"
                                  name="payment-method"
                                  id="cartão de crédito"
-                                 value="cartão de crédito"
+                                 value="Cartão de crédito"
                                  checked
                                />  
                                <label for="cartão de crédito">
@@ -51,7 +51,7 @@ const PaymentScreen = {
                                  type="radio"
                                  name="payment-method"
                                  id="cartão de débito"
-                                 value="cartão de débito" 
+                                 value="Cartão de débito" 
                                />  
                                <label for="cartão de débito">
                                    <h3 style="margin-left: 1rem">Cartão de débito</h3>
@@ -64,7 +64,7 @@ const PaymentScreen = {
                                  type="radio"
                                  name="payment-method"
                                  id="boleto"
-                                 value="boleto" 
+                                 value="Boleto" 
                                />  
                                <label for="boleto">
                                    <h3 style="margin-left: 1rem">Boleto</h3>
@@ -76,7 +76,7 @@ const PaymentScreen = {
                                <input 
                                  type="radio"
                                  name="payment-method"
-                                 id="depósito"
+                                 id="Depósito bancário"
                                  value="depósito" 
                                />  
                                <label for="depósito">

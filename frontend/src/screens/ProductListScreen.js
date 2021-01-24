@@ -89,10 +89,7 @@ const ProductListScreen = {
                                  `).join('\n')}
                                </tbody>
                         </table>
-                    </div>
-                 <div>
-                     <p>Info here</p>
-                 </div>                
+                    </div>                
              </div>
         </div>
       `;
