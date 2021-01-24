@@ -40,6 +40,7 @@ app.use('/api/orders', orderRouter);
 
 app.use('/uploads', express.static(path.join(__dirname, '/../uploads')));
 
+
 app.use(express.static(path.join(__dirname, '/../frontend')));
 
 app.get('*', (req, res) => {
@@ -51,6 +52,6 @@ app.use((err, req, res, next) => {
     res.status(status).send({ message: err.message });
 });
 
-app.listen(5000, () => {
+app.listen(config.PORT, () => {
     console.log('serve at http://localhost:5000')
 });
