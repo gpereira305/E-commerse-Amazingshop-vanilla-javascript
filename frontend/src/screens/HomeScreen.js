@@ -23,8 +23,12 @@ const HomeScreen = {
                     <div class="product"> 
                                     
                           <a href="/#/product/${product._id}"> 
-                            <img src="${!product.image || `/images/no_image.jpg`}" alt="${product.name}"
-                           />
+                          ${
+                            product.image ? 
+                            `<img src="${product.image}" alt="${product.name}"/>` :
+                            `<img src="/images/no_image.jpg" alt="${product.name}"/>`
+                           }
+                            
                             <div class="product-name">
                               <p>
                                 ${product.name}

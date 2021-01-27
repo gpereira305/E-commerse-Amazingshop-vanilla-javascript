@@ -38,7 +38,7 @@ const ProductScreen = {
 
                <div class="details">
                   <div class="details-image">
-                     <img src="${product.image  && `/images/no_image.jpg`}" alt="${product.name}"/>
+                     <img src="${product.image}" alt="${product.name}"/>
                   </div>
 
                    <div class="details-info">
