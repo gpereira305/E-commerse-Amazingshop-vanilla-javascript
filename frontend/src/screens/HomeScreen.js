@@ -10,51 +10,50 @@ const HomeScreen = {
       }
 
 
-        return `
+        return ` 
+        <ul class="products">
+        <div class="main-banner">
+            <img src="/images/product-0.jpg" alt="banner"/>
+        </div>
 
-          <ul class="products">
-          <div class="main-banner">
-              <img src="/images/product-0.jpg" alt="banner"/>
-           </div>
-            ${products.map(product => ` 
-               <li class="product-showcase">
+        ${products
+          .map(
+            (product) => `  
+                  <li>
+                    <div class="product"> 
+                                    
+                          <a href="/#/product/${product._id}"> 
+                            <img src="${!product.image || `/images/no_image.jpg`}" alt="${product.name}"
+                           />
+                            <div class="product-name">
+                              <p>
+                                ${product.name}
+                              </p>
+                            </a>
+                          </div>
 
-                  <div class="product">
-                     <a href="/#/product/${product._id}">
-                        <img src="${product.image}" alt="${product.name}"/>
-                     </a>
-                   <div class="product-info-list" style="padding: 0 .7rem;">
-                   <div class="product-name">
-                     <a href="/#/product/1">
-                          ${product.name}
-                     </a>
-                 
-                     <div class="product-ratings style="color: #ffc000;">
-                        ${Ratings.render({
-                          value: product.rating,
-                          text: `${product.numReviews} avaliações`
-                        })}
-                     </div>
-
-                      <div class="product-brand">
-                          ${product.brand}
-                      </div>
-
-                      <div class="product-price">
+                          <div class="product-rating">
+                            ${Ratings.render({
+                              value: product.rating,
+                              text: `${product.numReviews} reviews`,
+                            })}
+                          </div>
+                          <div class="product-brand">
+                            ${product.brand}
+                          </div>
+                          <div class="product-price">
                           R$ ${product.price} à vista
                       </div>
                       <div class="payment-option">
-                          <p style="margin-bottom: 1rem;">Ou em 6x sem juros</p>
-                      </div> 
-                      <div style="color: #44bd32;">
-                          <p style="margin-bottom: 1rem;">Frete grátis acima de R$ 100.00</p>
-                      </div> 
-                    </div> 
-                </div>
-               </li>  
-            `).join('\n')}
-          </ul> 
-        `;
+                          <p style="margin-bottom: 1rem; color: #44bd32;"">Ou em 6x sem juros</p>
+                      </div>  
+
+                      </div>
+                  </li>  
+        `
+          )
+          .join('\n')}
+      `;
     } 
 };
 

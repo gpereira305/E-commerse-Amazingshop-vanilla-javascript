@@ -101,7 +101,7 @@ import { clearCart} from '../localStorage';
                                     <li class="cart-products">
                                        <div class="cart-image">
                                           <a href="/#/"> 
-                                              <img src="${item.image}" alt="${item.name}" style="max-width: 12rem;"/>
+                                              <img src="${item.image  && `/images/no_image.jpg`}" alt="${item.name}" style="max-width: 12rem;"/>
                                           </a>
                                        
                                        <div class="cart-item">

@@ -198,7 +198,8 @@ header a:hover {
     display: flex;
     flex-wrap: wrap;
     padding: 0;
-    justify-content: center;
+    /* justify-content: center; */
+    justify-content: space-around;
 }
 
 .products li {
@@ -230,6 +231,7 @@ header a:hover {
 
 .product img {
     width: 100%;
+    height: 338px;
 }
 
 .product-main-details {

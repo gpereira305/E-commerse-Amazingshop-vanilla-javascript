@@ -120,7 +120,9 @@ const CartScreen = {
                                  cartItems.map(item =>`
                                  <li>
                                     <div class="cart-image">
-                                       <a href="/#/"><img src="${item.image}" alt="${item.name}"/></a>
+                                       <a href="/#/">
+                                          <img src="${item.image  && `/images/no_image.jpg`}" alt="${item.name}"/>
+                                       </a>
                                     </div>
 
                                     <div class="cart-name">
