@@ -23,8 +23,9 @@ const HomeScreen = {
                     <div class="product"> 
                                     
                           <a href="/#/product/${product._id}">  
-                            <img src="${product.image}" alt="${product.name}"/>
+                              <img src="${product.image}" alt="${product.name}" />
                           </a>  
+                     <div style='padding: 0 1rem;'>
                         <div class="product-name">
                               <p>
                                 ${product.name}
@@ -48,7 +49,8 @@ const HomeScreen = {
 
                       <div class="payment-option">
                           <p style="margin-bottom: 1rem; color: #44bd32;"">Ou em 6x sem juros</p>
-                      </div>   
+                      </div> 
+                </div>    
                       </div>
                   </li>  
          `).join('\n')}
