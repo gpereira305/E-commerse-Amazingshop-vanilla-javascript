@@ -101,7 +101,7 @@ const ProductEditScreen = {
                             />
                             <input
                                 type="file"
-                                name="image" 
+                                name="image-file" 
                                 id="image-file"
                             /> 
                          </li>

@@ -40,7 +40,6 @@ app.use('/api/orders', orderRouter);
 
 app.use('/uploads', express.static(path.join(__dirname, '/../uploads')));
 
-
 app.use(express.static(path.join(__dirname, '/../frontend')));
 
 app.get('*', (req, res) => {

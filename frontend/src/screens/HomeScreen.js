@@ -22,41 +22,36 @@ const HomeScreen = {
                   <li>
                     <div class="product"> 
                                     
-                          <a href="/#/product/${product._id}"> 
-                          ${
-                            product.image ? 
-                            `<img src="${product.image}" alt="${product.name}"/>` :
-                            `<img src="/images/no_image.jpg" alt="${product.name}"/>`
-                           }
-                            
-                            <div class="product-name">
+                          <a href="/#/product/${product._id}">  
+                            <img src="${product.image}" alt="${product.name}"/>
+                          </a>  
+                        <div class="product-name">
                               <p>
                                 ${product.name}
-                              </p>
-                            </a>
-                          </div>
+                              </p> 
+                         </div> 
 
                           <div class="product-rating">
-                            ${Ratings.render({
-                              value: product.rating,
-                              text: `${product.numReviews} reviews`,
-                            })}
+                              ${Ratings.render({
+                                  value: product.rating,
+                                 text: `${product.numReviews} reviews`,
+                              })}
                           </div>
+
                           <div class="product-brand">
-                            ${product.brand}
+                               ${product.brand}
                           </div>
+
                           <div class="product-price">
-                          R$ ${product.price} à vista
-                      </div>
+                               R$ ${product.price} à vista
+                          </div>
+
                       <div class="payment-option">
                           <p style="margin-bottom: 1rem; color: #44bd32;"">Ou em 6x sem juros</p>
-                      </div>  
-
+                      </div>   
                       </div>
                   </li>  
-        `
-          )
-          .join('\n')}
+         `).join('\n')}
       `;
     } 
 };
