@@ -14,7 +14,7 @@ const DashBoardMenu = {
                      <a href="/#/orderlist">Pedidos</a>
                   </li>
                   <li class="${props.selected === 'products' ? 'selected' : ''}">
-                     <a href="/#/productlist">Podutos</a>
+                     <a href="/#/productlist">Produtos</a>
                   </li>
                </ul>
            </div>

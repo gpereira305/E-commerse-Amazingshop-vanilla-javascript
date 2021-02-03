@@ -17,14 +17,11 @@ import { clearCart} from '../localStorage';
          const confirmOrder = document.getElementById('order-confirmBtn')
          confirmOrder.addEventListener('click', () => { 
                showMessage('<p style="color: #44bd32;">Pedido realizado com sucesso!</p>', () => {
-                  showLoading();
-
+                  showLoading(); 
                   rerender(OrderScreen);
 
-                  clearCart();
-
-                  document.location.hash = '/mylistorder';
-                  hideLoading();
+                  document.location.hash = '/mylistorder'; 
+                  clearCart(); 
                 });
          });
 
@@ -46,12 +43,8 @@ import { clearCart} from '../localStorage';
        isPaid,
        paidAt,
        
-     } = await getOrder(request.id);
-   //   if (!isPaid) {
-   //     addPaypalSdk(totalPrice);
-   //   }
- 
-
+     } = await getOrder(request.id); 
+  
         return `
           <div style="width: 100%;">
           <div class="order-number">

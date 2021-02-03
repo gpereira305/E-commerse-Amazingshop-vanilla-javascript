@@ -31,7 +31,7 @@ const ProductScreen = {
 
          return `
             <div class="content" style="width:100%;">
-               <div style="color:#b64606; margin-top: 4rem;">   
+               <div style="color:#b64606; margin-top: 6rem;">   
                   <i class="fas fa-chevron-left"></i>
                   <a href="/#/" style="color:#b64606">Voltar</a> 
                </div>
@@ -39,11 +39,8 @@ const ProductScreen = {
                <div class="details">
                   <div class="details-image">
                      <img src="${product.image}" alt="${product.name}"/>
-                  </div>
-
-                   <div class="details-info">
-
-        
+                  </div> 
+                   <div class="details-info"> 
                    <div class="details-action">
                       <ul>
                       <li>

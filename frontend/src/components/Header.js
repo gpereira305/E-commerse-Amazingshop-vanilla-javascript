@@ -14,11 +14,11 @@ const Header = {
         <div class="brand">
               <a href="/#/">Amazing <span style="color:#b64606;">Shop</span></a>
          </div>
-            <div>
+            <div class="header-info">
               ${
                 name
                   ? `<a href="/#/profile">${name}`
-                  : `<a href="/#/signin"><i class="fas fa-user"></i> Logar</a>` 
+                  : `<a href="/#/signin"><i class="fas fa-user"></i> Login</a>` 
                }
                ${
                 isAdmin ? `<a href="/#/dashboard">Admin</a>` : '' 

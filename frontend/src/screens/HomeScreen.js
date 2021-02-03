@@ -26,9 +26,9 @@ const HomeScreen = {
                        </a>  
                      <div style='padding: 0 1rem;'>
                         <div class="product-name">
-                              <p>
+                              <h3>
                                 ${product.name}
-                              </p> 
+                              </h3> 
                          </div> 
 
                           <div class="product-rating">

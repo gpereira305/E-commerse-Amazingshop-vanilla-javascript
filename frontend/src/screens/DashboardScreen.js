@@ -23,7 +23,7 @@ const DashBoardScreen = {
                   <li>
                     <div class="summary-title color1">
                         <span>
-                             <i class="fa fa-users"> Clientes ativos</i>
+                             <i class="fa fa-users"> Clientes Ativos</i>
                         </span>
                     </div>
                    <div class="summary-body">${summary.users[0].numUsers}</div>
@@ -32,7 +32,7 @@ const DashBoardScreen = {
                   <li>
                     <div class="summary-title color2">
                         <span>
-                             <i class="fa fa-shopping-basket"> Pedidos feitos</i>
+                             <i class="fa fa-shopping-basket"> Total de  Pedidos</i>
                         </span>
                     </div> 
                     <div class="summary-body">${summary.orders[0].numOrders}</div>
@@ -42,7 +42,7 @@ const DashBoardScreen = {
                   <li>
                     <div class="summary-title color3">
                         <span>
-                             <i class="fa fa-money-bill-alt"> Vendas concretizadas</i>
+                             <i class="fa fa-money-bill-alt"> Total de Vendas</i>
                         </span>
                     </div>
                    <div class="summary-body">R$ ${summary.orders[0].totalSales.toFixed(2)}</div>

@@ -73,7 +73,7 @@ const PlaceOrderScreen = {
         } = convertCartToOrders();   
 
         return `
-          <div style="width: 100%;">
+          <div style="width: 100%; margin-top: 5rem;">
      
           ${CheckoutSteps.render({
             step1: true,
