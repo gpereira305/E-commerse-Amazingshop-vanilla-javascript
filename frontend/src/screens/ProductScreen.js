@@ -32,7 +32,6 @@ const ProductScreen = {
          return `
             <div class="content" style="width:100%;">
                <div style="color:#b64606; margin-top: 6rem;">   
-                  <i class="fas fa-chevron-left"></i>
                   <a href="/#/" style="color:#b64606">Voltar</a> 
                </div>
 
