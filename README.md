@@ -25,7 +25,7 @@ Esse projeto contém as seguintes tecnologias:
 * Heroku
 	
 ## Installation
-Para ter essa aplicação rodando em máquina local certifique se de ter o Node instalando, faça o git clone, abra o terminal na raiz do projeto, execute “cd backend” para iniciar o servidor e “cd frontend” para ser visualizado no browser.
+Para ter essa aplicação rodando em máquina local certifique se de ter o Node instalado, execute git clone, abra o terminal na raiz do projeto, digite 'cd backend' e 'npm start' para iniciar o servidor, abra um segundo terminal também na raiz do projeto e digite 'cd frontend' e 'npm start' para ser visualizado no browser.
 Para conferir esse APP online acesse esse link : https://amazingshopapp.herokuapp.com
  
 
