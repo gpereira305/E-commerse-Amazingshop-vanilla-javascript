@@ -32,10 +32,10 @@ Para conferir esse APP online acesse esse link : https://amazingshopapp.herokuap
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
 
-```
 
 ## Demo
-![](images/paper-scissors-spock.gif)
+![homepage](https://user-images.githubusercontent.com/66249777/106828058-3e224f80-6668-11eb-82fe-dffcea166eec.png)
+
 
 
 
