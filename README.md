@@ -34,9 +34,16 @@ Para conferir esse APP online acesse esse link : https://amazingshopapp.herokuap
 
 
 ## Demo
+HomePge
 ![homepage](https://user-images.githubusercontent.com/66249777/106828058-3e224f80-6668-11eb-82fe-dffcea166eec.png)
+
+Painel de Produtos
 ![painel_produtos](https://user-images.githubusercontent.com/66249777/106828175-6ad66700-6668-11eb-8159-6ebadb68009d.png)
+
+Painel de Acompanhamento de pedidos
 ![painel_pedidos](https://user-images.githubusercontent.com/66249777/106828200-7c1f7380-6668-11eb-91e3-3ee8641c7f58.png)
+
+Painel Principal Admin
 ![painel_admin](https://user-images.githubusercontent.com/66249777/106828227-880b3580-6668-11eb-8b11-91ad0c3548de.png)
 
 
